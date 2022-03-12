@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>我的第一个颜色网站</title>
+    <!--外面用这个做注释，里面用/**/-->
+    <style>
+
+        .a {
+            width: 200px; /*图形大小*/
+            height: 200px; 
+            border: 1px solid #ffffff; /*所设计图形线框颜色——内*/
+            float: left;
+            box-sizing: border-box;
+            transition: 1s; /*渐变会原色时间*/
+        }
+
+        .b {
+            width: 400px;
+            height: 400px;
+            border: 1px solid #704214; /*所设计图形线框颜色——外*/
+            position: absolute;
+            left: 50%; /*绝对左右居中*/
+            top: 50%;
+            margin-left: -200px; /*整体向左移动200px*/
+            margin-top: -200px;
+            overflow: hidden;
+            border-radius: 50%; /*锐化50%，变成⚪*/
+        }
+
+        .a:nth-child(1) {
+            background: #ffff00;/*各个分块的颜色*/
+        }
+
+        .a:nth-child(2) {
+            background: #00ff21;
+        }
+
+        .a:nth-child(3) {
+            background: #825ec3;
+        }
+
+        .a:nth-child(4) {
+            background: #ff8033;
+        }
+
+        .a:hover {
+            background: #00008b;
+            transition: 1s;
+        }
+    </style>
+
+</head>
+<body>
+    <div class=" b">
+        <div class="a"></div><!--调用上面的a创建四个格子-->
+        <div class="a"></div>
+        <div class="a"></div>
+        <div class="a"></div>
+    </div>
+</body>
+</html>
